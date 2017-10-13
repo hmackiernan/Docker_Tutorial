@@ -22,3 +22,6 @@ docker machine env myvm1
 eval $(docker-machine env myvm1)
 # verify it's on myvm1 by the asterisk
 docker-machine ls
+
+# deploy app into the swarm manager, because we set the env bove
+docker stack deploy -c docker-compose.yml getstartedlab
