@@ -7,3 +7,5 @@ END_PART_TWO
 docker swarm init
 docker stack deploy -c docker-compose.yml getstartedlab
 docker service ls
+docker stack rm getstartedlab
+docker node ls # the swarm is still up
