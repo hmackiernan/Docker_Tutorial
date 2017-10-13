@@ -1,2 +1,5 @@
 docker build -t friendlyhello .
 docker run -p 4000:80 friendlyhello
+ docker images
+ docker tag f7bdfaf05229 hmackiernan/tutorial:part2
+docker push hmackiernan/tutorial:part2
