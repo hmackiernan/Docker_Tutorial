@@ -9,3 +9,10 @@ docker stack deploy -c docker-compose.yml getstartedlab
 docker service ls
 docker stack rm getstartedlab
 docker node ls # the swarm is still up
+docker-machine create --driver virtualbox myvm1
+docker-machine create --driver virtualbox myvm2
+# create two machines
+docker-machine ls # list the machines and their IP
+docker-machine ssh myvm1 "docker swarm init --advertise-addr 192.168.99.100"  # inside myvm1, init the swarm
+docker-machine ssh myvm2 "docker swarm join --token SWMTKN-1-1zqzjnx0wftg0gk9bovdh0so79a2nyqoiygt2nw1xrura38xas-00v0uiepjuw5hlf0poeqzjw8m 192.168.99.100:2377" # inside myvm2, join the swarm w/ the prefab command emitted by myvm1 
+docker node ls # show the swarm
