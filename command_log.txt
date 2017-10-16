@@ -39,3 +39,8 @@ docker stack deploy -c docker-compose.yml getstartedlab
 
 # create a directory on mvm1 to store data
 docker-machine ssh myvm1 "mkdir ./data"
+
+
+# redeploy
+docker stack deploy -c docker-compose.yml getstartedlab
+# this time with redis; for some reason now the visualizer works
