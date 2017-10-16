@@ -36,3 +36,6 @@ docker stack deploy -c docker-compose.yml getstartedlab
 # never works at this stage
 
 #Edited docker-compose.yml - added redis
+
+# create a directory on mvm1 to store data
+docker-machine ssh myvm1 "mkdir ./data"
