@@ -28,3 +28,11 @@ docker stack deploy -c docker-compose.yml getstartedlab
 docker stack rm getstartedlab # remove the stack, leave the swarm
 
 eval $(docker-machine env -u)  #unset the env from myvm1
+
+# Start part 5
+#Edited docker-compose.yml - added visualize
+# deploy
+docker stack deploy -c docker-compose.yml getstartedlab
+# never works at this stage
+
+#Edited docker-compose.yml - added redis
